@@ -64,7 +64,7 @@ p {
     cursor: pointer;
     color: #3498db;
     margin-left: auto;
-    text-decoration: none;
+    text-decoration: underline;
     font-weight: bold;
 }
 
@@ -88,6 +88,17 @@ p {
     gap: 10px;
 }
 
+.icon-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
 
 .export-option {
     display: flex;

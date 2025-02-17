@@ -39,26 +39,44 @@ const App = () => {
   const [showNotification, setShowNotification] = useState(false);
 
   const notificationSettings = {
-    notify_text: "You have a new message!",
-    notify_desc: [{ desc: true, text: "Check your inbox now." }],
-    notify_btn: { btn: true, text: "Open" },
-    redirect_url: { redirect: false, url: "#", text: "Ignore" },
-    notify_icon: { icon: true, color: "#6a3ceb", type: "info" },
-    notify_close: { close_n: true, color: "#ff0000" },
+    notify_text: "Custom code is not validated.",
+    notify_desc: [
+      {
+        desc: true,
+        text: "Incorrect code may impact your website's performance",
+      },
+    ],
+    redirect_url: { redirect: false, url: "#", text: "Maybe later" },
+    notify_icon: { icon: false, color: "#E2E1E7", type: null },
+    notify_close: { close_n: true, color: "#84869f" },
     notify_color: {
-      background: "#f0f0f0",
-      text: "#333",
-      border: { type: true, color: "5px solid #430fe1" },
+      background: "#f7f7f9",
+      text: "#3a393e",
+      border: {
+        type: true,
+        color: "5px solid #c5c4cc",
+      },
     },
-    progress_bar: { type: true, background: "#ff0000" },
-    notify_duration: 5000,
+    progress_bar: {
+      type: false,
+      background: "#ff0000",
+    },
+    notify_duration: 3000,
+  };
+
+  const handleClick = () => {
+    setShowNotification(true);
+
+    const duration = notificationSettings.notify_duration ?? 3000;
+
+    setTimeout(() => {
+      setShowNotification(false);
+    }, duration);
   };
 
   return (
     <div>
-      <button onClick={() => setShowNotification(true)}>
-        Show Notification
-      </button>
+      <button onClick={handleClick}>Show Notification</button>
       {showNotification && <SmartNotification {...notificationSettings} />}
     </div>
   );

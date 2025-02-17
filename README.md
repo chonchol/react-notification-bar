@@ -2,7 +2,7 @@
 
 A highly customizable React component for displaying customizable notifications with progress bars.
 
-![SmartNotification Example](https://ibb.co.com/7tthtWbY)
+![SmartNotification Example](https://i.ibb.co.com/PGGkGhtm/Screenshot-2025-02-17-134209.png)
 
 ## ✨ Features
 

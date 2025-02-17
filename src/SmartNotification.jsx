@@ -110,7 +110,7 @@ const SmartNotification = ({
 
   const handleClose = () => {
     setOpenNotify(false);
-    setProgress(100); // Ensure progress reaches 100% visually
+    setProgress(100);
   };
 
   return (
